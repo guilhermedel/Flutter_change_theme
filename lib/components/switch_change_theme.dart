@@ -7,10 +7,16 @@ class SwitchChangeTheme extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Switch(      
-      value: context.watch<ThemeController>().themeMode == ThemeMode.dark,
-      onChanged: (value) {
-        context.read<ThemeController>().toggleTheme(value);
+    return IconButton(
+      icon: Icon(
+        context.watch<ThemeController>().themeMode == ThemeMode.dark
+            ? Icons.dark_mode
+            : Icons.light_mode,
+      ),
+      onPressed: () {
+        bool isDarkMode =
+            context.read<ThemeController>().themeMode == ThemeMode.dark;
+        context.read<ThemeController>().toggleTheme(!isDarkMode);
       },
     );
   }

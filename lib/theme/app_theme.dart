@@ -73,5 +73,7 @@ class AppTheme {
         borderRadius: BorderRadius.circular(16),
       ),
     ),
+    listTileTheme:
+        ListTileThemeData(selectedTileColor: Colors.grey.withOpacity(0.3)),
   );
 }
