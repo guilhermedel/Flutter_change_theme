@@ -18,7 +18,7 @@ class CustomDrawer extends StatelessWidget {
               'Guilherme de Lamare Abreu',
               style: TextStyle(color: Colors.white),
             ),
-            accountEmail: const Text('glhrmdelamare@gmail.com',
+            accountEmail: const Text('glhrmlinkedin@gmail.com',
                 style: TextStyle(color: Colors.white)),
             currentAccountPicture: const Icon(
               Icons.account_circle,

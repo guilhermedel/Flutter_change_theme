@@ -9,7 +9,6 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title),
-      actions: [SwitchChangeTheme()],
       leading: Builder(
         builder: (context) {
           return IconButton(

@@ -3,6 +3,7 @@ import 'package:flutter_animated_theme/animated_theme_app.dart';
 import 'package:flutter_animated_theme/animation_type.dart';
 import 'package:flutter_change_theme/components/custom_drawer.dart';
 import 'package:flutter_change_theme/components/custom_navbar.dart';
+import 'package:flutter_change_theme/components/switch_change_theme.dart';
 import 'package:flutter_change_theme/providers/navigation_provider.dart';
 import 'package:flutter_change_theme/providers/theme_controller.dart';
 import 'package:flutter_change_theme/theme/app_theme.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         builder: (context, themeProvider, child) {
           return AnimatedThemeApp(
             animationType: AnimationType.CIRCULAR_ANIMATED_THEME,
-            animationDuration: Duration(milliseconds: 200),
+            animationDuration: const Duration(milliseconds: 200),
             title: 'Flutter Theme Demo',
             theme: AppTheme.lightTheme,
             locale: const Locale('pt', 'BR'),
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: GlobalMaterialLocalizations.delegates,
             darkTheme: AppTheme.darkTheme,
             themeMode: themeProvider.themeMode,
-            home: HomePage(title: 'Flutter change theme'),
+            home: const HomePage(title: 'Flutter change theme'),
           );
         },
       ),
@@ -60,7 +61,8 @@ class _HomePageState extends State<HomePage> {
     
     return Scaffold(
       appBar: CustomNavbar(title: widget.title),
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
+      body: const Align(alignment: Alignment.center,child: SwitchChangeTheme(),),
     );
   }
 }
